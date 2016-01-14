@@ -1,5 +1,5 @@
 //
-//  FollowViewController.swift
+//  SuivreViewController.swift
 //  Social Bartender
 //
 //  Created by nico on 28/11/2015.
@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import ConvenienceKit
+import Parse
+import Foundation
 
-class FollowViewController: UIViewController {
+class SuivreViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -80,6 +83,9 @@ class FollowViewController: UIViewController {
     func updateList(results: [PFObject]?, error: NSError?) {
         self.users = results as? [PFUser] ?? []
         self.tableView.reloadData()
+        //    if let erreur = erreur {
+        //      CaptureErreurs.erreurParDefaut(erreur)
+        //    }
         
     }
     
@@ -98,7 +104,9 @@ class FollowViewController: UIViewController {
             self.followingUsers = relations.map {
                 $0.objectForKey(ParseRequete.ParseSuivreVersUser) as! PFUser
             }
-            
+            //    if let erreur = erreur {
+            //      CaptureErreurs.erreurParDefaut(erreur)
+            //    }
         }
     }
     
@@ -106,22 +114,22 @@ class FollowViewController: UIViewController {
 
 // MARK: TableView Data Source
 
-extension FollowViewController: UITableViewDataSource {
+extension SuivreViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.users?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell") as! FollowViewControllerCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MaCellule") as! SuivreTableViewCell
         
         let user = users![indexPath.row]
-        cell.user = user
+        cell.utilisateur = user
         
         if let followingUsers = followingUsers {
             // Vérifie is le user courant est déjà suivit par le user loggué
             // Change l'état du bouton en fction du résultat
-            cell.canFollow = !followingUsers.contains(user)
+            cell.peutSuivre = !followingUsers.contains(user)
         }
         
         cell.delegate = self
@@ -132,7 +140,7 @@ extension FollowViewController: UITableViewDataSource {
 
 // MARK: Searchbar Delegate
 
-extension FollowViewController: UISearchBarDelegate {
+extension SuivreViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
@@ -152,26 +160,32 @@ extension FollowViewController: UISearchBarDelegate {
     
 }
 
-// MARK: FollowViewControllerCell Delegate
+// MARK: SuivreViewControllerCell Delegate
 
-extension FollowViewController: FollowViewControllerCellDelegate {
+extension SuivreViewController: SuivreTableViewCellDelegate {
     
-    func cell(cell: FollowViewControllerCell, didSelectFollowUser user: PFUser) {
-        ParseHelper.addFollowRelationshipFromUser(PFUser.currentUser()!, toUser: user)
+    func cell(cell: SuivreTableViewCell, didSelectFollowUser user: PFUser) {
+        ParseRequete.ajouterFollower(PFUser.currentUser()!, versUtilisateur: user)
         // Met à jour le cache local
         followingUsers?.append(user)
     }
     
-    func cell(cell: FriendSearchTableViewCell, didSelectUnfollowUser user: PFUser) {
+    func cell(cell: SuivreTableViewCell, didSelectUnfollowUser user: PFUser) {
         if var followingUsers = followingUsers {
-            ParseHelper.removeFollowRelationshipFromUser(PFUser.currentUser()!, toUser: user)
+            ParseRequete.supprimerFollower(PFUser.currentUser()!, versUtilisateur: user)
             // Met à jour le cache local
             removeObject(user, fromArray: &followingUsers)
             self.followingUsers = followingUsers
         }
     }
     
-}
-
-
+    // Voir: http://stackoverflow.com/questions/24938948/array-extension-to-remove-object-by-value
+    private func removeObject<T : Equatable>(object: T, inout fromArray array: [T])
+    {
+        let index = array.indexOf(object)
+        if let index = index {
+            array.removeAtIndex(index)
+        }
+    }
+    
 }

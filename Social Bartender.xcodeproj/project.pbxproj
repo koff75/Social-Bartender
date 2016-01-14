@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03341D471C3D4E2300EB85A3 /* ManageurBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341D461C3D4E2300EB85A3 /* ManageurBluetooth.swift */; };
+		03341D491C3D752900EB85A3 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341D481C3D752900EB85A3 /* ConfigurationViewController.swift */; };
+		0343290D1BFB17310064D19D /* AccueilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343290C1BFB17310064D19D /* AccueilViewController.swift */; };
+		0343290F1BFB32CF0064D19D /* SelectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0343290E1BFB32CF0064D19D /* SelectionCollectionViewController.swift */; };
+		034329111BFB67230064D19D /* RechercherCocktailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034329101BFB67230064D19D /* RechercherCocktailCollectionViewCell.swift */; };
+		034701B91BFD1332002F869A /* CreerCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034701B81BFD1332002F869A /* CreerCocktailViewController.swift */; };
+		034FB9C81BF494C2000FA6E8 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FB9C61BF494C2000FA6E8 /* ParseFacebookUtilsV4.framework */; };
+		034FB9C91BF494C2000FA6E8 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FB9C71BF494C2000FA6E8 /* ParseTwitterUtils.framework */; };
+		034FB9CD1BF4968F000FA6E8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FB9CC1BF4968F000FA6E8 /* FBSDKLoginKit.framework */; };
+		034FB9CF1BF4969D000FA6E8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034FB9CE1BF4969D000FA6E8 /* FBSDKShareKit.framework */; };
+		034FB9D11BF51178000FA6E8 /* AjouterAmiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FB9D01BF51178000FA6E8 /* AjouterAmiViewController.swift */; };
 		03552D101BECF30D00DF1616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552D0F1BECF30D00DF1616 /* AppDelegate.swift */; };
 		03552D121BECF30D00DF1616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552D111BECF30D00DF1616 /* ViewController.swift */; };
 		03552D151BECF30D00DF1616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03552D131BECF30D00DF1616 /* Main.storyboard */; };
@@ -14,6 +25,47 @@
 		03552D1A1BECF30D00DF1616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03552D181BECF30D00DF1616 /* LaunchScreen.storyboard */; };
 		03552D251BECF30D00DF1616 /* Social_BartenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552D241BECF30D00DF1616 /* Social_BartenderTests.swift */; };
 		03552D301BECF30D00DF1616 /* Social_BartenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552D2F1BECF30D00DF1616 /* Social_BartenderUITests.swift */; };
+		03552D3F1BECFF3300DF1616 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D3D1BECFF3300DF1616 /* Bolts.framework */; };
+		03552D421BECFF7F00DF1616 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D411BECFF7F00DF1616 /* AudioToolbox.framework */; };
+		03552D441BECFF8B00DF1616 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D431BECFF8B00DF1616 /* CFNetwork.framework */; };
+		03552D461BECFF9700DF1616 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D451BECFF9700DF1616 /* CoreGraphics.framework */; };
+		03552D481BECFFA400DF1616 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D471BECFFA400DF1616 /* CoreLocation.framework */; };
+		03552D4A1BECFFB000DF1616 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D491BECFFB000DF1616 /* MobileCoreServices.framework */; };
+		03552D4C1BECFFB800DF1616 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D4B1BECFFB800DF1616 /* QuartzCore.framework */; };
+		03552D4E1BECFFBF00DF1616 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D4D1BECFFBF00DF1616 /* Security.framework */; };
+		03552D501BECFFC900DF1616 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D4F1BECFFC900DF1616 /* StoreKit.framework */; };
+		03552D521BECFFD200DF1616 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D511BECFFD200DF1616 /* SystemConfiguration.framework */; };
+		03552D541BED002300DF1616 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D531BED002300DF1616 /* libz.tbd */; };
+		03552D561BED003400DF1616 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D551BED003400DF1616 /* libsqlite3.tbd */; };
+		03552D581BED006B00DF1616 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D571BED006B00DF1616 /* Accounts.framework */; };
+		03552D5A1BED007300DF1616 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03552D591BED007300DF1616 /* Social.framework */; };
+		03552D5D1BED369300DF1616 /* InscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552D5C1BED369300DF1616 /* InscriptionViewController.swift */; };
+		036045301BEE9DF6009CAD57 /* RechercherCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360452F1BEE9DF6009CAD57 /* RechercherCocktailViewController.swift */; };
+		0360453B1BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 036045331BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m */; };
+		0360453C1BEF6DE1009CAD57 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036045351BEF6DE1009CAD57 /* MMDrawerController.m */; };
+		0360453D1BEF6DE1009CAD57 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 036045381BEF6DE1009CAD57 /* MMDrawerVisualState.m */; };
+		0360453E1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0360453A1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m */; };
+		036045411BEF71A2009CAD57 /* CoteDroitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036045401BEF71A2009CAD57 /* CoteDroitViewController.swift */; };
+		036045461BEFAE2A009CAD57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 036045451BEFAE2A009CAD57 /* MBProgressHUD.m */; };
+		036C87A31C2850AB00CC8374 /* SuivreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C87A21C2850AB00CC8374 /* SuivreTableViewCell.swift */; };
+		037A9B291BEFCE8000E60698 /* MotDePasseOublieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037A9B281BEFCE8000E60698 /* MotDePasseOublieViewController.swift */; };
+		039550B61C2994DE00E77343 /* captureErreurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039550B51C2994DE00E77343 /* captureErreurs.swift */; };
+		039550B81C2AA4D200E77343 /* PublicationHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039550B71C2AA4D200E77343 /* PublicationHeaderTableViewCell.swift */; };
+		039C71D11BFC8FF200AF1844 /* DetailCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C71D01BFC8FF200AF1844 /* DetailCocktailViewController.swift */; };
+		03A0B08A1C07ABCE004E63EE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0B0891C07ABCE004E63EE /* FBSDKCoreKit.framework */; };
+		03A0B0931C09F408004E63EE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0921C09F408004E63EE /* TimelineViewController.swift */; };
+		03A0B0951C09F419004E63EE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0941C09F419004E63EE /* PhotoViewController.swift */; };
+		03A0B0971C09F439004E63EE /* SuivreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0961C09F439004E63EE /* SuivreViewController.swift */; };
+		03A0B0991C0B9CD7004E63EE /* PrendrePhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0981C0B9CD7004E63EE /* PrendrePhotoHelper.swift */; };
+		03A0B09E1C0CA8DC004E63EE /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B09D1C0CA8DC004E63EE /* Publication.swift */; };
+		03A0B0A11C0D9857004E63EE /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0A01C0D9857004E63EE /* PublicationTableViewCell.swift */; };
+		03A0B0AB1C0DA168004E63EE /* ParseRequete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0AA1C0DA168004E63EE /* ParseRequete.swift */; };
+		03AED7C31BF11EE400639142 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */; };
+		03D422641BEFE94600417CED /* CoteGaucheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D422631BEFE94600417CED /* CoteGaucheViewController.swift */; };
+		03E5244D1C0E48EA00438D64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E5244C1C0E48EA00438D64 /* FBSDKCoreKit.framework */; };
+		03E5244F1C0E490500438D64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E5244E1C0E490500438D64 /* FBSDKLoginKit.framework */; };
+		03E524511C0E493800438D64 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E524501C0E493800438D64 /* FBSDKShareKit.framework */; };
+		27B848F1911D86C076F13C5B /* Pods_Social_Bartender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBCE944E6F4D468ADCAC54C /* Pods_Social_Bartender.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +86,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03341D461C3D4E2300EB85A3 /* ManageurBluetooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageurBluetooth.swift; sourceTree = "<group>"; };
+		03341D481C3D752900EB85A3 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		0343290C1BFB17310064D19D /* AccueilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilViewController.swift; sourceTree = "<group>"; };
+		0343290E1BFB32CF0064D19D /* SelectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionCollectionViewController.swift; sourceTree = "<group>"; };
+		034329101BFB67230064D19D /* RechercherCocktailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechercherCocktailCollectionViewCell.swift; sourceTree = "<group>"; };
+		034701B81BFD1332002F869A /* CreerCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreerCocktailViewController.swift; sourceTree = "<group>"; };
+		034FB9C61BF494C2000FA6E8 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		034FB9C71BF494C2000FA6E8 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		034FB9CC1BF4968F000FA6E8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		034FB9CE1BF4969D000FA6E8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		034FB9D01BF51178000FA6E8 /* AjouterAmiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjouterAmiViewController.swift; sourceTree = "<group>"; };
 		03552D0C1BECF30D00DF1616 /* Social Bartender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Bartender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03552D0F1BECF30D00DF1616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03552D111BECF30D00DF1616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +110,56 @@
 		03552D2B1BECF30D00DF1616 /* Social BartenderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social BartenderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03552D2F1BECF30D00DF1616 /* Social_BartenderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_BartenderUITests.swift; sourceTree = "<group>"; };
 		03552D311BECF30D00DF1616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03552D3D1BECFF3300DF1616 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		03552D411BECFF7F00DF1616 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		03552D431BECFF8B00DF1616 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		03552D451BECFF9700DF1616 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		03552D471BECFFA400DF1616 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		03552D491BECFFB000DF1616 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		03552D4B1BECFFB800DF1616 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		03552D4D1BECFFBF00DF1616 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		03552D4F1BECFFC900DF1616 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		03552D511BECFFD200DF1616 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		03552D531BED002300DF1616 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		03552D551BED003400DF1616 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		03552D571BED006B00DF1616 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		03552D591BED007300DF1616 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		03552D5C1BED369300DF1616 /* InscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InscriptionViewController.swift; sourceTree = "<group>"; };
+		0360452F1BEE9DF6009CAD57 /* RechercherCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechercherCocktailViewController.swift; sourceTree = "<group>"; };
+		036045311BEF6DE0009CAD57 /* Social Bartender-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Social Bartender-Bridging-Header.h"; sourceTree = "<group>"; };
+		036045321BEF6DE1009CAD57 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		036045331BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		036045341BEF6DE1009CAD57 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		036045351BEF6DE1009CAD57 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		036045361BEF6DE1009CAD57 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		036045371BEF6DE1009CAD57 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		036045381BEF6DE1009CAD57 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		036045391BEF6DE1009CAD57 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		0360453A1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		036045401BEF71A2009CAD57 /* CoteDroitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoteDroitViewController.swift; sourceTree = "<group>"; };
+		036045441BEFAE2A009CAD57 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		036045451BEFAE2A009CAD57 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		036C87A21C2850AB00CC8374 /* SuivreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuivreTableViewCell.swift; sourceTree = "<group>"; };
+		037A9B281BEFCE8000E60698 /* MotDePasseOublieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotDePasseOublieViewController.swift; sourceTree = "<group>"; };
+		039550B51C2994DE00E77343 /* captureErreurs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = captureErreurs.swift; sourceTree = "<group>"; };
+		039550B71C2AA4D200E77343 /* PublicationHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		039C71D01BFC8FF200AF1844 /* DetailCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCocktailViewController.swift; sourceTree = "<group>"; };
+		03A0B0891C07ABCE004E63EE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		03A0B0921C09F408004E63EE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		03A0B0941C09F419004E63EE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		03A0B0961C09F439004E63EE /* SuivreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuivreViewController.swift; sourceTree = "<group>"; };
+		03A0B0981C0B9CD7004E63EE /* PrendrePhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrendrePhotoHelper.swift; path = ../PrendrePhoto/PrendrePhotoHelper.swift; sourceTree = "<group>"; };
+		03A0B09D1C0CA8DC004E63EE /* Publication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		03A0B0A01C0D9857004E63EE /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
+		03A0B0AA1C0DA168004E63EE /* ParseRequete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRequete.swift; sourceTree = "<group>"; };
+		03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		03D422631BEFE94600417CED /* CoteGaucheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoteGaucheViewController.swift; sourceTree = "<group>"; };
+		03E5244C1C0E48EA00438D64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		03E5244E1C0E490500438D64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		03E524501C0E493800438D64 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3BBCE944E6F4D468ADCAC54C /* Pods_Social_Bartender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Bartender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E1B52E55C352254173879D /* Pods-Social Bartender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Bartender.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Bartender/Pods-Social Bartender.release.xcconfig"; sourceTree = "<group>"; };
+		D143B2AD91DBED78AACA9410 /* Pods-Social Bartender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Bartender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Bartender/Pods-Social Bartender.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +167,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03552D4C1BECFFB800DF1616 /* QuartzCore.framework in Frameworks */,
+				034FB9C91BF494C2000FA6E8 /* ParseTwitterUtils.framework in Frameworks */,
+				03552D5A1BED007300DF1616 /* Social.framework in Frameworks */,
+				03552D581BED006B00DF1616 /* Accounts.framework in Frameworks */,
+				03552D561BED003400DF1616 /* libsqlite3.tbd in Frameworks */,
+				03E5244D1C0E48EA00438D64 /* FBSDKCoreKit.framework in Frameworks */,
+				03552D541BED002300DF1616 /* libz.tbd in Frameworks */,
+				03A0B08A1C07ABCE004E63EE /* FBSDKCoreKit.framework in Frameworks */,
+				03E524511C0E493800438D64 /* FBSDKShareKit.framework in Frameworks */,
+				03552D521BECFFD200DF1616 /* SystemConfiguration.framework in Frameworks */,
+				03E5244F1C0E490500438D64 /* FBSDKLoginKit.framework in Frameworks */,
+				03552D501BECFFC900DF1616 /* StoreKit.framework in Frameworks */,
+				03552D4E1BECFFBF00DF1616 /* Security.framework in Frameworks */,
+				03552D4A1BECFFB000DF1616 /* MobileCoreServices.framework in Frameworks */,
+				03552D481BECFFA400DF1616 /* CoreLocation.framework in Frameworks */,
+				034FB9CF1BF4969D000FA6E8 /* FBSDKShareKit.framework in Frameworks */,
+				03552D461BECFF9700DF1616 /* CoreGraphics.framework in Frameworks */,
+				034FB9CD1BF4968F000FA6E8 /* FBSDKLoginKit.framework in Frameworks */,
+				03552D441BECFF8B00DF1616 /* CFNetwork.framework in Frameworks */,
+				03552D421BECFF7F00DF1616 /* AudioToolbox.framework in Frameworks */,
+				034FB9C81BF494C2000FA6E8 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				03552D3F1BECFF3300DF1616 /* Bolts.framework in Frameworks */,
+				27B848F1911D86C076F13C5B /* Pods_Social_Bartender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +213,12 @@
 		03552D031BECF30C00DF1616 = {
 			isa = PBXGroup;
 			children = (
+				03552D5B1BED00AB00DF1616 /* Frameworks */,
+				6FEBAF026D6138F0B31A76E2 /* Pods */,
+				03552D0D1BECF30D00DF1616 /* Products */,
 				03552D0E1BECF30D00DF1616 /* Social Bartender */,
 				03552D231BECF30D00DF1616 /* Social BartenderTests */,
 				03552D2E1BECF30D00DF1616 /* Social BartenderUITests */,
-				03552D0D1BECF30D00DF1616 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +235,25 @@
 		03552D0E1BECF30D00DF1616 /* Social Bartender */ = {
 			isa = PBXGroup;
 			children = (
-				03552D0F1BECF30D00DF1616 /* AppDelegate.swift */,
-				03552D111BECF30D00DF1616 /* ViewController.swift */,
-				03552D131BECF30D00DF1616 /* Main.storyboard */,
+				03A0B08E1C09F17E004E63EE /* Démarrage */,
+				036045471BEFAE3F009CAD57 /* MBProgress FB ParseFB */,
+				0360453F1BEF6E05009CAD57 /* MMDrawer */,
+				03A0B08D1C09F162004E63EE /* Social */,
 				03552D161BECF30D00DF1616 /* Assets.xcassets */,
-				03552D181BECF30D00DF1616 /* LaunchScreen.storyboard */,
+				036045401BEF71A2009CAD57 /* CoteDroitViewController.swift */,
+				03D422631BEFE94600417CED /* CoteGaucheViewController.swift */,
+				034FB9D01BF51178000FA6E8 /* AjouterAmiViewController.swift */,
+				03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */,
 				03552D1B1BECF30D00DF1616 /* Info.plist */,
+				03552D181BECF30D00DF1616 /* LaunchScreen.storyboard */,
+				03552D131BECF30D00DF1616 /* Main.storyboard */,
+				034329101BFB67230064D19D /* RechercherCocktailCollectionViewCell.swift */,
+				0360452F1BEE9DF6009CAD57 /* RechercherCocktailViewController.swift */,
+				0343290E1BFB32CF0064D19D /* SelectionCollectionViewController.swift */,
+				039C71D01BFC8FF200AF1844 /* DetailCocktailViewController.swift */,
+				03341D481C3D752900EB85A3 /* ConfigurationViewController.swift */,
+				03341D461C3D4E2300EB85A3 /* ManageurBluetooth.swift */,
+				036045311BEF6DE0009CAD57 /* Social Bartender-Bridging-Header.h */,
 			);
 			path = "Social Bartender";
 			sourceTree = "<group>";
@@ -110,8 +261,8 @@
 		03552D231BECF30D00DF1616 /* Social BartenderTests */ = {
 			isa = PBXGroup;
 			children = (
-				03552D241BECF30D00DF1616 /* Social_BartenderTests.swift */,
 				03552D261BECF30D00DF1616 /* Info.plist */,
+				03552D241BECF30D00DF1616 /* Social_BartenderTests.swift */,
 			);
 			path = "Social BartenderTests";
 			sourceTree = "<group>";
@@ -119,10 +270,160 @@
 		03552D2E1BECF30D00DF1616 /* Social BartenderUITests */ = {
 			isa = PBXGroup;
 			children = (
-				03552D2F1BECF30D00DF1616 /* Social_BartenderUITests.swift */,
 				03552D311BECF30D00DF1616 /* Info.plist */,
+				03552D2F1BECF30D00DF1616 /* Social_BartenderUITests.swift */,
 			);
 			path = "Social BartenderUITests";
+			sourceTree = "<group>";
+		};
+		03552D5B1BED00AB00DF1616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03E524501C0E493800438D64 /* FBSDKShareKit.framework */,
+				03E5244E1C0E490500438D64 /* FBSDKLoginKit.framework */,
+				03E5244C1C0E48EA00438D64 /* FBSDKCoreKit.framework */,
+				03552D591BED007300DF1616 /* Social.framework */,
+				03552D571BED006B00DF1616 /* Accounts.framework */,
+				03552D551BED003400DF1616 /* libsqlite3.tbd */,
+				03552D531BED002300DF1616 /* libz.tbd */,
+				03552D511BECFFD200DF1616 /* SystemConfiguration.framework */,
+				03552D4F1BECFFC900DF1616 /* StoreKit.framework */,
+				03552D4D1BECFFBF00DF1616 /* Security.framework */,
+				03552D4B1BECFFB800DF1616 /* QuartzCore.framework */,
+				03552D491BECFFB000DF1616 /* MobileCoreServices.framework */,
+				03552D471BECFFA400DF1616 /* CoreLocation.framework */,
+				03552D451BECFF9700DF1616 /* CoreGraphics.framework */,
+				03552D431BECFF8B00DF1616 /* CFNetwork.framework */,
+				03552D411BECFF7F00DF1616 /* AudioToolbox.framework */,
+				03552D3D1BECFF3300DF1616 /* Bolts.framework */,
+				3BBCE944E6F4D468ADCAC54C /* Pods_Social_Bartender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0360453F1BEF6E05009CAD57 /* MMDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				036045321BEF6DE1009CAD57 /* MMDrawerBarButtonItem.h */,
+				036045331BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m */,
+				036045361BEF6DE1009CAD57 /* MMDrawerController+Subclass.h */,
+				036045341BEF6DE1009CAD57 /* MMDrawerController.h */,
+				036045351BEF6DE1009CAD57 /* MMDrawerController.m */,
+				036045371BEF6DE1009CAD57 /* MMDrawerVisualState.h */,
+				036045381BEF6DE1009CAD57 /* MMDrawerVisualState.m */,
+				036045391BEF6DE1009CAD57 /* UIViewController+MMDrawerController.h */,
+				0360453A1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawer;
+			sourceTree = "<group>";
+		};
+		036045471BEFAE3F009CAD57 /* MBProgress FB ParseFB */ = {
+			isa = PBXGroup;
+			children = (
+				03A0B0891C07ABCE004E63EE /* FBSDKCoreKit.framework */,
+				034FB9CC1BF4968F000FA6E8 /* FBSDKLoginKit.framework */,
+				034FB9CE1BF4969D000FA6E8 /* FBSDKShareKit.framework */,
+				036045441BEFAE2A009CAD57 /* MBProgressHUD.h */,
+				036045451BEFAE2A009CAD57 /* MBProgressHUD.m */,
+				034FB9C61BF494C2000FA6E8 /* ParseFacebookUtilsV4.framework */,
+				034FB9C71BF494C2000FA6E8 /* ParseTwitterUtils.framework */,
+			);
+			path = "MBProgress FB ParseFB";
+			sourceTree = "<group>";
+		};
+		036C87A11C284B8D00CC8374 /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				036C87A21C2850AB00CC8374 /* SuivreTableViewCell.swift */,
+			);
+			name = Followers;
+			sourceTree = "<group>";
+		};
+		03A0B08D1C09F162004E63EE /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				03A0B0911C09F362004E63EE /* Controlleurs */,
+				03A0B0A91C0DA138004E63EE /* Helpers */,
+				03A0B08F1C09F339004E63EE /* Modèles */,
+				03A0B09C1C0CA876004E63EE /* PrendrePhoto */,
+				03A0B0901C09F35C004E63EE /* Vues */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		03A0B08E1C09F17E004E63EE /* Démarrage */ = {
+			isa = PBXGroup;
+			children = (
+				0343290C1BFB17310064D19D /* AccueilViewController.swift */,
+				03552D0F1BECF30D00DF1616 /* AppDelegate.swift */,
+				03552D5C1BED369300DF1616 /* InscriptionViewController.swift */,
+				037A9B281BEFCE8000E60698 /* MotDePasseOublieViewController.swift */,
+				03552D111BECF30D00DF1616 /* ViewController.swift */,
+			);
+			path = "Démarrage";
+			sourceTree = "<group>";
+		};
+		03A0B08F1C09F339004E63EE /* Modèles */ = {
+			isa = PBXGroup;
+			children = (
+				03A0B09D1C0CA8DC004E63EE /* Publication.swift */,
+			);
+			path = "Modèles";
+			sourceTree = "<group>";
+		};
+		03A0B0901C09F35C004E63EE /* Vues */ = {
+			isa = PBXGroup;
+			children = (
+				036C87A11C284B8D00CC8374 /* Followers */,
+				03A0B09F1C0D97B8004E63EE /* Timeline */,
+			);
+			path = Vues;
+			sourceTree = "<group>";
+		};
+		03A0B0911C09F362004E63EE /* Controlleurs */ = {
+			isa = PBXGroup;
+			children = (
+				034701B81BFD1332002F869A /* CreerCocktailViewController.swift */,
+				03A0B0961C09F439004E63EE /* SuivreViewController.swift */,
+				03A0B0941C09F419004E63EE /* PhotoViewController.swift */,
+				03A0B0921C09F408004E63EE /* TimelineViewController.swift */,
+			);
+			path = Controlleurs;
+			sourceTree = "<group>";
+		};
+		03A0B09C1C0CA876004E63EE /* PrendrePhoto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PrendrePhoto;
+			sourceTree = "<group>";
+		};
+		03A0B09F1C0D97B8004E63EE /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				03A0B0A01C0D9857004E63EE /* PublicationTableViewCell.swift */,
+				039550B71C2AA4D200E77343 /* PublicationHeaderTableViewCell.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		03A0B0A91C0DA138004E63EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				03A0B0AA1C0DA168004E63EE /* ParseRequete.swift */,
+				039550B51C2994DE00E77343 /* captureErreurs.swift */,
+				03A0B0981C0B9CD7004E63EE /* PrendrePhotoHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6FEBAF026D6138F0B31A76E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D143B2AD91DBED78AACA9410 /* Pods-Social Bartender.debug.xcconfig */,
+				A8E1B52E55C352254173879D /* Pods-Social Bartender.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +433,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03552D341BECF30D00DF1616 /* Build configuration list for PBXNativeTarget "Social Bartender" */;
 			buildPhases = (
+				1CA04B61E7FE32B2D8002D00 /* Check Pods Manifest.lock */,
 				03552D081BECF30D00DF1616 /* Sources */,
 				03552D091BECF30D00DF1616 /* Frameworks */,
 				03552D0A1BECF30D00DF1616 /* Resources */,
+				40222AD7D894A4172C5F1326 /* Embed Pods Frameworks */,
+				B445DD2A2E95E4ABB5E6D61B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +497,7 @@
 				TargetAttributes = {
 					03552D0B1BECF30D00DF1616 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3P67FQZ4SP;
 					};
 					03552D1F1BECF30D00DF1616 = {
 						CreatedOnToolsVersion = 7.2;
@@ -251,13 +556,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CA04B61E7FE32B2D8002D00 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40222AD7D894A4172C5F1326 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Social Bartender/Pods-Social Bartender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B445DD2A2E95E4ABB5E6D61B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Social Bartender/Pods-Social Bartender-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03552D081BECF30D00DF1616 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036045301BEE9DF6009CAD57 /* RechercherCocktailViewController.swift in Sources */,
+				034329111BFB67230064D19D /* RechercherCocktailCollectionViewCell.swift in Sources */,
+				039550B81C2AA4D200E77343 /* PublicationHeaderTableViewCell.swift in Sources */,
 				03552D121BECF30D00DF1616 /* ViewController.swift in Sources */,
+				03341D471C3D4E2300EB85A3 /* ManageurBluetooth.swift in Sources */,
+				039550B61C2994DE00E77343 /* captureErreurs.swift in Sources */,
+				0360453B1BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m in Sources */,
+				0343290F1BFB32CF0064D19D /* SelectionCollectionViewController.swift in Sources */,
+				036C87A31C2850AB00CC8374 /* SuivreTableViewCell.swift in Sources */,
+				034701B91BFD1332002F869A /* CreerCocktailViewController.swift in Sources */,
+				03A0B09E1C0CA8DC004E63EE /* Publication.swift in Sources */,
+				037A9B291BEFCE8000E60698 /* MotDePasseOublieViewController.swift in Sources */,
+				0360453E1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m in Sources */,
+				03A0B0971C09F439004E63EE /* SuivreViewController.swift in Sources */,
+				0343290D1BFB17310064D19D /* AccueilViewController.swift in Sources */,
+				03A0B0931C09F408004E63EE /* TimelineViewController.swift in Sources */,
+				036045461BEFAE2A009CAD57 /* MBProgressHUD.m in Sources */,
+				03341D491C3D752900EB85A3 /* ConfigurationViewController.swift in Sources */,
+				03A0B0951C09F419004E63EE /* PhotoViewController.swift in Sources */,
+				039C71D11BFC8FF200AF1844 /* DetailCocktailViewController.swift in Sources */,
+				03A0B0AB1C0DA168004E63EE /* ParseRequete.swift in Sources */,
 				03552D101BECF30D00DF1616 /* AppDelegate.swift in Sources */,
+				0360453C1BEF6DE1009CAD57 /* MMDrawerController.m in Sources */,
+				03D422641BEFE94600417CED /* CoteGaucheViewController.swift in Sources */,
+				03552D5D1BED369300DF1616 /* InscriptionViewController.swift in Sources */,
+				03A0B0991C0B9CD7004E63EE /* PrendrePhotoHelper.swift in Sources */,
+				036045411BEF71A2009CAD57 /* CoteDroitViewController.swift in Sources */,
+				0360453D1BEF6DE1009CAD57 /* MMDrawerVisualState.m in Sources */,
+				03AED7C31BF11EE400639142 /* CustomTableViewCell.swift in Sources */,
+				034FB9D11BF51178000FA6E8 /* AjouterAmiViewController.swift in Sources */,
+				03A0B0A11C0D9857004E63EE /* PublicationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +681,7 @@
 				03552D141BECF30D00DF1616 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		03552D181BECF30D00DF1616 /* LaunchScreen.storyboard */ = {
@@ -307,6 +690,7 @@
 				03552D191BECF30D00DF1616 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -395,23 +779,78 @@
 		};
 		03552D351BECF30D00DF1616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D143B2AD91DBED78AACA9410 /* Pods-Social Bartender.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+				);
 				INFOPLIST_FILE = "Social Bartender/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-iL-Rodez.Social-Bartender";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social Bartender/Social Bartender-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		03552D361BECF30D00DF1616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8E1B52E55C352254173879D /* Pods-Social Bartender.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+					"$(PROJECT_DIR)/Social",
+					Bartender,
+				);
 				INFOPLIST_FILE = "Social Bartender/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-iL-Rodez.Social-Bartender";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social Bartender/Social Bartender-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +921,7 @@
 				03552D361BECF30D00DF1616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03552D371BECF30D00DF1616 /* Build configuration list for PBXNativeTarget "Social BartenderTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +930,7 @@
 				03552D391BECF30D00DF1616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03552D3A1BECF30D00DF1616 /* Build configuration list for PBXNativeTarget "Social BartenderUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +939,7 @@
 				03552D3C1BECF30D00DF1616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

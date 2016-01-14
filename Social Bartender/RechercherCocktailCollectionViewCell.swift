@@ -8,9 +8,14 @@
 
 import UIKit
 
-class RechercherCollectionViewCell: UICollectionViewCell {
+class RechercherCocktailCollectionViewCell: UICollectionViewCell {
     
+    // Pour la view Rechercher
     @IBOutlet weak var celluleImageView: UIImageView!
     @IBOutlet weak var celluleLabel: UILabel!
+    
+    // Pour la view Selection
+    @IBOutlet weak var selectionCelluleImageView: UIImageView!
+    @IBOutlet weak var selectionCelluleLabel: UILabel!
     
 }

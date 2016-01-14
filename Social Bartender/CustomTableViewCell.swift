@@ -10,6 +10,10 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+    // Nom du menu dans le bandeau de gauche    
+    @IBOutlet weak var menuItemLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

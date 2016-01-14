@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 private let reuseIdentifier = "Cell"
 
@@ -90,5 +91,10 @@ class SelectionCollectionViewController: UICollectionViewController {
     
     }
     */
+    @IBAction func MenuButtonItem(sender: AnyObject) {
+        // Active le panneau de Gauche (Menu)
+        //var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
 
 }

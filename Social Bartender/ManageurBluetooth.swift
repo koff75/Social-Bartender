@@ -1,5 +1,5 @@
 //
-//  BluetoothManager.swift
+//  ManageurBluetooth.swift
 //  Social Bartender
 //
 //  Created by nico on 06/01/2016.

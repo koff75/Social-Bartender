@@ -68,7 +68,7 @@ class RechercherCocktailViewController: UIViewController, UICollectionViewDataSo
         if(rechercherCollectionView != nil){
             // Vérifie s'il y a un élément à rechercher
             if searchBar.text != "" {
-                query.whereKey("nom_cocktail", containsString: searchBar.text!.lowercaseString)
+                query.whereKey("nom_cocktail", matchesRegex: searchBar.text!, modifiers: "i")
             }
         }
         else {

@@ -38,6 +38,7 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     var feedbackView = UITextView()
 
     var cocktailId:String?
+    var categorieId:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,10 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
             if (updateObject["origine_cocktail"] != nil) {
                 origineLabel.text = updateObject["origine_cocktail"] as? String}
             if (updateObject["nom_categorie"] != nil) {
-                categorieLabel.text = updateObject["nom_categorie"] as? String}
+                categorieId = updateObject["nom_categorie"].objectId
+                // Récupère la catégorie
+                recupererCategorie()
+            }
             if (updateObject["description_cocktail"] != nil) {
                 descriptionLabel.text = updateObject["description_cocktail"] as? String}
             if (updateObject["photo_cocktail"] != nil) {
@@ -77,8 +81,8 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
             }
         }
         
-        
-        // Récupérer les ingrédients ET quantité
+
+        // Récupère les ingrédients ET quantité
         recupererIngredients()
         
 
@@ -140,6 +144,17 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     }
     @IBAction func deconnecterButtonTapped(sender: AnyObject) {
         deconnecterButton.addTarget(nrfManager, action: "disconnect", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func recupererCategorie() {
+        // Va récupérer dans Parse les Catégories de Cocktails
+        let objet = PFQuery(className: "Categories")
+        objet.getObjectInBackgroundWithId(categorieId!) { (objet:PFObject?, erreur:NSError?) -> Void in
+            if erreur == nil {
+                let nom_categorie = objet!.objectForKey("nom_categorie") as! String
+                self.categorieLabel.text! = nom_categorie
+            }
+        }
     }
 
     // Chercher tous les ingrédients d'un cocktail

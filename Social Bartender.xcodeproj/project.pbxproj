@@ -61,6 +61,8 @@
 		03A0B0A11C0D9857004E63EE /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0A01C0D9857004E63EE /* PublicationTableViewCell.swift */; };
 		03A0B0AB1C0DA168004E63EE /* ParseRequete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0B0AA1C0DA168004E63EE /* ParseRequete.swift */; };
 		03AED7C31BF11EE400639142 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */; };
+		03CFADE81C4D4CA800A40154 /* ClassementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CFADE71C4D4CA800A40154 /* ClassementViewController.swift */; };
+		03CFADEA1C4D5A5E00A40154 /* ClassementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CFADE91C4D5A5E00A40154 /* ClassementTableViewCell.swift */; };
 		03D422641BEFE94600417CED /* CoteGaucheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D422631BEFE94600417CED /* CoteGaucheViewController.swift */; };
 		03E5244D1C0E48EA00438D64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E5244C1C0E48EA00438D64 /* FBSDKCoreKit.framework */; };
 		03E5244F1C0E490500438D64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E5244E1C0E490500438D64 /* FBSDKLoginKit.framework */; };
@@ -153,6 +155,8 @@
 		03A0B0A01C0D9857004E63EE /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
 		03A0B0AA1C0DA168004E63EE /* ParseRequete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRequete.swift; sourceTree = "<group>"; };
 		03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		03CFADE71C4D4CA800A40154 /* ClassementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassementViewController.swift; sourceTree = "<group>"; };
+		03CFADE91C4D5A5E00A40154 /* ClassementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassementTableViewCell.swift; sourceTree = "<group>"; };
 		03D422631BEFE94600417CED /* CoteGaucheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoteGaucheViewController.swift; sourceTree = "<group>"; };
 		03E5244C1C0E48EA00438D64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		03E5244E1C0E490500438D64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 				03552D161BECF30D00DF1616 /* Assets.xcassets */,
 				036045401BEF71A2009CAD57 /* CoteDroitViewController.swift */,
 				03D422631BEFE94600417CED /* CoteGaucheViewController.swift */,
+				03CFADE71C4D4CA800A40154 /* ClassementViewController.swift */,
+				03CFADE91C4D5A5E00A40154 /* ClassementTableViewCell.swift */,
 				034FB9D01BF51178000FA6E8 /* AjouterAmiViewController.swift */,
 				03AED7C21BF11EE400639142 /* CustomTableViewCell.swift */,
 				03552D1B1BECF30D00DF1616 /* Info.plist */,
@@ -616,11 +622,13 @@
 				03341D471C3D4E2300EB85A3 /* ManageurBluetooth.swift in Sources */,
 				039550B61C2994DE00E77343 /* captureErreurs.swift in Sources */,
 				0360453B1BEF6DE1009CAD57 /* MMDrawerBarButtonItem.m in Sources */,
+				03CFADE81C4D4CA800A40154 /* ClassementViewController.swift in Sources */,
 				0343290F1BFB32CF0064D19D /* SelectionCollectionViewController.swift in Sources */,
 				036C87A31C2850AB00CC8374 /* SuivreTableViewCell.swift in Sources */,
 				034701B91BFD1332002F869A /* CreerCocktailViewController.swift in Sources */,
 				03A0B09E1C0CA8DC004E63EE /* Publication.swift in Sources */,
 				037A9B291BEFCE8000E60698 /* MotDePasseOublieViewController.swift in Sources */,
+				03CFADEA1C4D5A5E00A40154 /* ClassementTableViewCell.swift in Sources */,
 				0360453E1BEF6DE1009CAD57 /* UIViewController+MMDrawerController.m in Sources */,
 				03A0B0971C09F439004E63EE /* SuivreViewController.swift in Sources */,
 				0343290D1BFB17310064D19D /* AccueilViewController.swift in Sources */,

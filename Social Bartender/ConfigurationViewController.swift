@@ -15,7 +15,7 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
     var feedbackView = UITextView()
     
     // Variable de passage, pour la méthode reception
-    var passage = 0
+    var passage:Int?
     
     // Popup chargement pour l'envoie des ingrédients
     var chargement: MBProgressHUD = MBProgressHUD()
@@ -55,6 +55,9 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
         self.navigationController?.navigationBarHidden = true
         // Je monte de 20px qui correspondait à un blanc de la status bar (tweak)
         self.navigationController!.navigationBar.frame = CGRectOffset(self.navigationController!.navigationBar.frame, 0.0, -20.0);
+        
+        // A chaque fois qu'on ouvre la conf, on demande ce qu'à la machine
+        passage = 0
     }
     /*override func prefersStatusBarHidden() -> Bool {
         return true
@@ -164,7 +167,8 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
     {
         self.log("Etat : Connecté")
         // "2;0;1#" est le code qui demande à la machine ses ingrédients sockés
-        envoyerCommande("2;0;1#")
+        envoyerCommande("2;0;1#2;0;2#2;0;3#")
+        
     }
     
     func nrfDidDisconnect(nrfManager:NRFManager)
@@ -175,10 +179,12 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
     func nrfReceivedData(nrfManager:NRFManager, data: NSData?, string: String?) {
         // Si 1er passage, c'est la commande de demande du contenu machine
         if(passage == 0) {
-            ingredientUnLabel.text = string
-            ingredientDeuxLabel.text = string
-            ingredientTroisLabel.text = string
-            passage++
+            // Séparateur
+            var tableauString = string?.componentsSeparatedByString("#")
+            ingredientUnLabel.text = tableauString![0]
+            ingredientDeuxLabel.text = tableauString![1]
+            ingredientTroisLabel.text = tableauString![2]
+            passage!++
         }
         self.log("D: ⬇ Réception - Chaîne: \(string) - Donnée: \(data)")
     }

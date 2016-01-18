@@ -12,7 +12,7 @@ import Parse
 class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Liste des noms du menu
-    var listeMenu:[String] = ["Selection", "Recherche", "Timeline", "Configuration" ,"Déconnexion"]
+    var listeMenu:[String] = ["Selection", "Recherche", "Timeline", "Classement", "Configuration","Déconnexion"]
     
     // Variables UI
     @IBOutlet weak var photoUtilisateurImageView: UIImageView!
@@ -50,7 +50,7 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var maCellule = tableView.dequeueReusableCellWithIdentifier("MaCellule", forIndexPath: indexPath) as! CustomTableViewCell
+        let maCellule = tableView.dequeueReusableCellWithIdentifier("MaCellule", forIndexPath: indexPath) as! CustomTableViewCell
         // On écris dans le label le champ du tableau listeMenu
         maCellule.menuItemLabel.text = listeMenu[indexPath.row]
         return maCellule
@@ -60,9 +60,9 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
         switch(indexPath.row) {
         case 0:
             // Ouverture Selection Cocktail
-            var pagePrincipaleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RechercherCocktailViewController2") as! RechercherCocktailViewController
-            var pagePrincipaleNav = UINavigationController(rootViewController:pagePrincipaleViewController)
-            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let pagePrincipaleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RechercherCocktailViewController2") as! RechercherCocktailViewController
+            let pagePrincipaleNav = UINavigationController(rootViewController:pagePrincipaleViewController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.contenuDrawer!.centerViewController = pagePrincipaleNav
             appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
 
@@ -70,18 +70,26 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
 
         case 1:
             // Ouverture Rechercher un Cocktail
-            var rechercherCocktailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RechercherCocktailViewController") as! RechercherCocktailViewController
-            var rechercherCocktailViewControllerNav = UINavigationController(rootViewController:rechercherCocktailViewController)
-            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let rechercherCocktailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RechercherCocktailViewController") as! RechercherCocktailViewController
+            let rechercherCocktailViewControllerNav = UINavigationController(rootViewController:rechercherCocktailViewController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.contenuDrawer!.centerViewController = rechercherCocktailViewControllerNav
             appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
         case 2:
             // Timeline
-            var socialTabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("SocialTabBarController") as! UITabBarController
-            var socialTabBarControllerNav = UINavigationController(rootViewController:socialTabBarController)
-            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let socialTabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("SocialTabBarController") as! UITabBarController
+            let socialTabBarControllerNav = UINavigationController(rootViewController:socialTabBarController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.contenuDrawer!.centerViewController = socialTabBarControllerNav
+            appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
+        case 3:
+            // Classement
+            let classementTabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("ClassementViewController") as! ClassementViewController
+            let classementTabBarControllerNav = UINavigationController(rootViewController:classementTabBarController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.contenuDrawer!.centerViewController = classementTabBarControllerNav
             appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
         /*case 3:
@@ -92,15 +100,15 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
             appDelegate.contenuDrawer!.centerViewController = creerCocktailViewControllerNav
             appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break*/
-        case 3:
+        case 4:
             // Configuration de récipients de la machine
-            var configurationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ConfigurationViewController") as! ConfigurationViewController
-            var configurationViewControllerNav = UINavigationController(rootViewController:configurationViewController)
-            var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let configurationViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ConfigurationViewController") as! ConfigurationViewController
+            let configurationViewControllerNav = UINavigationController(rootViewController:configurationViewController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.contenuDrawer!.centerViewController = configurationViewControllerNav
             appDelegate.contenuDrawer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
-        case 4:
+        case 5:
             // Deconnexion
             // Affichage du popup de chargement lors de la déconnexion
             let chargement = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -113,9 +121,9 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
             PFUser.logOutInBackgroundWithBlock { (erreur:NSError?) -> Void in
                 // Revenir sur la page d'identification
                 let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                var accueilViewController:AccueilViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("AccueilViewController") as! AccueilViewController
-                var accueilViewControllerNav = UINavigationController(rootViewController: accueilViewController)
-                var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let accueilViewController:AccueilViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("AccueilViewController") as! AccueilViewController
+                let accueilViewControllerNav = UINavigationController(rootViewController: accueilViewController)
+                let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 appDelegate.window?.rootViewController = accueilViewControllerNav
             }
             break

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DetailCocktailViewController.envoieCommande() -&gt; ():DetailCocktailViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.publications.getter:TimelineViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:TimelineViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Publication.(envoyerPublication(Publication) -&gt; ([String], colonne : [String]) -&gt; ()).(closure #2):Publication.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.viewDidLoad() -&gt; ():DetailCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categorieLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "nomLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = " updateObject[&quot;nom_categorie&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "photoCocktailImageView.image">
+            </PersistentString>
+            <PersistentString
+               value = "fichierImage">
+            </PersistentString>
+            <PersistentString
+               value = "test">
+            </PersistentString>
+            <PersistentString
+               value = "cocktailsPerso">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.viewDidLoad() -&gt; ():CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "erreur">
+            </PersistentString>
+            <PersistentString
+               value = "categorieListe">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.(viewDidAppear(TimelineViewController) -&gt; (Bool) -&gt; ()).(closure #1):TimelineViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TimelineViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Publication.telechargerImage() -&gt; ():Publication.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo_cocktail">
+            </PersistentString>
+            <PersistentString
+               value = "self.image.value">
+            </PersistentString>
+            <PersistentString
+               value = "publications">
+            </PersistentString>
+            <PersistentString
+               value = "erreur">
+            </PersistentString>
+            <PersistentString
+               value = "publications.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:TimelineViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "publications.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConfigurationViewController.enregistrerButtonTapped(AnyObject) -&gt; ():ConfigurationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ingredientUnSelectionne">
+            </PersistentString>
+            <PersistentString
+               value = "ingredientDeuxSelectionne">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.pickerView(UIPickerView, numberOfRowsInComponent : Int) -&gt; Int:CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categorieListe.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConfigurationViewController.pickerView(UIPickerView, titleForRow : Int, forComponent : Int) -&gt; String!:ConfigurationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ingredientUnSelectionne">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimelineViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():TimelineViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ClassementViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:ClassementViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.compteurLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.recupererCategorie() -&gt; ():DetailCocktailViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ConfigurationViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():ConfigurationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ingredientsListe[row]">
+            </PersistentString>
+            <PersistentString
+               value = "ingredientsListeId">
+            </PersistentString>
+            <PersistentString
+               value = "pickerView">
+            </PersistentString>
+            <PersistentString
+               value = "ingredientUnSelectionneId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.(viewDidLoad(CreerCocktailViewController) -&gt; () -&gt; ()).(closure #1):CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categorieListe">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.creerCocktailButtonTapped(AnyObject) -&gt; ():CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nomCocktailTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.(recupererIngredients(DetailCocktailViewController) -&gt; () -&gt; ()).(closure #1):DetailCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cocktailId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static ParseRequete.requetesTimelineUtilisateurCourant(([PFObject]?, NSError?) -&gt; ()) -&gt; ():ParseRequete.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.(recupererIngredients(DetailCocktailViewController) -&gt; () -&gt; ()).(closure #1).(closure #1):DetailCocktailViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "degreSelectionne2">
+            </PersistentString>
+            <PersistentString
+               value = "ingredientDeuxSelectionneId">
+            </PersistentString>
+            <PersistentString
+               value = "degreSelectionne1">
+            </PersistentString>
+            <PersistentString
+               value = "ingredientUnSelectionneId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CreerCocktailViewController.pickerView(UIPickerView, titleForRow : Int, forComponent : Int) -&gt; String!:CreerCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categorieListe.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.recupererIngredients() -&gt; ():DetailCocktailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ingrListe">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailCocktailViewController.(recupererCategorie(DetailCocktailViewController) -&gt; () -&gt; ()).(closure #1):DetailCocktailViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

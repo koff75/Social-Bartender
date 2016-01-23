@@ -204,7 +204,7 @@ class CreerCocktailViewController: UIViewController, UITextFieldDelegate, UIText
         
         // Concaténer les deux colonne du pickerView Degre
         let degreTotal = self.degreSelectionne1 + self.degreSelectionne2
-        if (self.nomCocktailTextField.text?.isEmpty == false && self.origineCocktailTextField.text?.isEmpty == false && self.descriptionCocktailTextView.text.isEmpty == false) {
+        if (self.nomCocktailTextField.text?.isEmpty == false && self.origineCocktailTextField.text?.isEmpty == false && self.descriptionCocktailTextView.text.isEmpty == false && self.quantiteUnSelectionne != nil && self.quantiteDeuxSelectionne != nil && quantiteTroisSelectionne != nil) {
             let textes: [String] = [self.nomCocktailTextField.text!, self.origineCocktailTextField.text!, self.descriptionCocktailTextView.text!, degreTotal, self.categorieSelectionneId!, self.ingredientUnSelectionneId!, self.ingredientDeuxSelectionneId!, self.ingredientTroisSelectionneId!, self.quantiteUnSelectionne!, self.quantiteDeuxSelectionne!, self.quantiteTroisSelectionne!]
             // Attention : Nom des colonnes de la table Cocktails_perso
             let colonnes: [String] = ["nom_cocktail", "origine_cocktail", "description_cocktail", "degre_cocktail", "nom_categorie"]
@@ -229,7 +229,7 @@ class CreerCocktailViewController: UIViewController, UITextFieldDelegate, UIText
     }
     
     // appelé quand 'retour' . retourne NO pour ignorer
-    func textFieldShouldReturn(textField: UITextField!) -> Bool
+    func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
         return true;
@@ -240,6 +240,11 @@ class CreerCocktailViewController: UIViewController, UITextFieldDelegate, UIText
             return false
         }
         return true
+    }
+    
+    // Change la vue quand le cocktail est partagé pour revenir à la timeline
+     func changerVue(){
+        tabBarController?.selectedIndex = 0
     }
     
 }

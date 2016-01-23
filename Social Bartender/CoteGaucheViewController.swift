@@ -78,7 +78,7 @@ class CoteGaucheViewController: UIViewController, UITableViewDataSource, UITable
             break
         case 2:
             // Timeline
-            let socialTabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("SocialTabBarController") as! UITabBarController
+            let socialTabBarController = self.storyboard?.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             let socialTabBarControllerNav = UINavigationController(rootViewController:socialTabBarController)
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.contenuDrawer!.centerViewController = socialTabBarControllerNav

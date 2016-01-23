@@ -10,6 +10,15 @@ import UIKit
 import Parse
 
 class ConfigurationViewController: UIViewController, NRFManagerDelegate {
+    
+    // Permet le stockage des valeurs sur le téléphone
+    let clesIngre = NSUserDefaults.standardUserDefaults()
+    enum clesIngredients {
+        static let cleIngredient1 = "cleIngredient1"
+        static let cleIngredient2 = "cleIngredient2"
+        static let cleIngredient3 = "cleIngredient3"
+    }
+    
     // Bluetooth
     var nrfManager:NRFManager!
     var feedbackView = UITextView()
@@ -58,6 +67,18 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
         
         // A chaque fois qu'on ouvre la conf, on demande ce qu'à la machine
         passage = 0
+        
+        // On charge les clés des ingrédients stockées sur le téléphone
+        if let ingr1 = clesIngre.stringForKey(clesIngredients.cleIngredient1) {
+            self.ingredientUnLabel.text = ingr1
+        }
+        if let ingr2 = clesIngre.stringForKey(clesIngredients.cleIngredient2) {
+            self.ingredientDeuxLabel.text = ingr2
+        }
+        if let ingr3 = clesIngre.stringForKey(clesIngredients.cleIngredient3) {
+            self.ingredientTroisLabel.text = ingr3
+        }
+
     }
     /*override func prefersStatusBarHidden() -> Bool {
         return true
@@ -136,12 +157,17 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
             self.envoyerCommande(ingr1)
             // Envoie ingrédient 2
             sleep(1)
-            let ingr2:String = "2;0;1;"+self.ingredientDeuxSelectionne!+"#"
+            let ingr2:String = "1;0;2;"+self.ingredientDeuxSelectionne!+"#"
             self.envoyerCommande(ingr2)
             // Envoie ingrédient 3
             sleep(1)
-            let ingr3:String = "3;0;1;"+self.ingredientTroisSelectionne!+"#"
+            let ingr3:String = "1;0;3;"+self.ingredientTroisSelectionne!+"#"
             self.envoyerCommande(ingr3)
+            // Si on revient sur la page Configuration, on redemande les ingrédients
+            self.passage = 0
+            self.envoyerCommande("2;0;1#")
+            self.envoyerCommande("2;0;2#")
+            self.envoyerCommande("2;0;3#")
         }
     }
     
@@ -167,8 +193,9 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
     {
         self.log("Etat : Connecté")
         // "2;0;1#" est le code qui demande à la machine ses ingrédients sockés
-        envoyerCommande("2;0;1#2;0;2#2;0;3#")
-        
+        envoyerCommande("2;0;1#")
+        envoyerCommande("2;0;2#")
+        envoyerCommande("2;0;3#")
     }
     
     func nrfDidDisconnect(nrfManager:NRFManager)
@@ -177,16 +204,26 @@ class ConfigurationViewController: UIViewController, NRFManagerDelegate {
     }
     
     func nrfReceivedData(nrfManager:NRFManager, data: NSData?, string: String?) {
+        self.log("D: ⬇ Réception - Chaîne: \(string) - Donnée: \(data)")
         // Si 1er passage, c'est la commande de demande du contenu machine
+        //var tableauString = string?.componentsSeparatedByString("#")
+
         if(passage == 0) {
-            // Séparateur
-            var tableauString = string?.componentsSeparatedByString("#")
-            ingredientUnLabel.text = tableauString![0]
-            ingredientDeuxLabel.text = tableauString![1]
-            ingredientTroisLabel.text = tableauString![2]
+            ingredientUnLabel.text = string!
+            //Enregistrement en dur dans l'application
+            self.clesIngre.setValue(ingredientUnLabel.text, forKey: clesIngredients.cleIngredient1)
+            passage!++
+        } else if(passage == 1) {
+            ingredientDeuxLabel.text = string!
+            //Enregistrement en dur dans l'application
+            self.clesIngre.setValue(ingredientDeuxLabel.text, forKey: clesIngredients.cleIngredient2)
+            passage!++
+        } else if(passage == 2) {
+            ingredientTroisLabel.text = string!
+            //Enregistrement en dur dans l'application
+            self.clesIngre.setValue(ingredientTroisLabel.text, forKey: clesIngredients.cleIngredient3)
             passage!++
         }
-        self.log("D: ⬇ Réception - Chaîne: \(string) - Donnée: \(data)")
     }
 
 

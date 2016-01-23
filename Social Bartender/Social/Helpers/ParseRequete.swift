@@ -27,7 +27,7 @@ class ParseRequete: NSObject {
     
     // Relation sur le contenu suivit
     static let ParseContenuSuivitClasse           = "Contenu_suivit"
-    static let ParseContenuSuivitduUser         = "duUser"
+    static let ParseContenuSuivitduUser           = "duUser"
     static let ParseContenuSuivitVersPublication  = "versCocktail_perso"
     
     // Relation entre utilisateurs

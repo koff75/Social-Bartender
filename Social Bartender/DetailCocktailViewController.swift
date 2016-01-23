@@ -10,6 +10,14 @@ import UIKit
 
 class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     
+    // Permet le stockage des valeurs sur le téléphone
+    let clesIngre = NSUserDefaults.standardUserDefaults()
+    enum clesIngredients {
+        static let cleIngredient1 = "cleIngredient1"
+        static let cleIngredient2 = "cleIngredient2"
+        static let cleIngredient3 = "cleIngredient3"
+    }
+    
     // Contient la donnée de l'objet cellule sélectionnée
     var currentObject : PFObject?
 
@@ -31,7 +39,7 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     
     
     var ingrListe: [String] = []
-    var quantiteListe: [Int] = []
+    var quantiteListe: [String] = []
     
     // Bluetooth
     var nrfManager:NRFManager!
@@ -117,27 +125,38 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
 
     }
     @IBAction func envoyerCocktailButtonTapped(sender: AnyObject) {
-        envoyerCocktailButton.addTarget(self, action: "envoieCommande", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        // Incrémente le compteur de consomation de cocktails sur Parse
-        if let updateObject = currentObject {
-            if (updateObject["nb_conso_cocktail"] != nil) {
-                var nbConso:Int = updateObject["nb_conso_cocktail"] as! Int
-                nbConso++
-                updateObject["nb_conso_cocktail"] = nbConso
-            } else {
-                // Si le compteur n'est pas initialisé dans Parse
-                updateObject["nb_conso_cocktail"] = 1
+        // On charge les clés des ingrédients stockées sur le téléphone
+        // Pour vérifier s'il est possible de faire le cocktail
+        let ingr1 = clesIngre.stringForKey(clesIngredients.cleIngredient1)
+        let ingr2 = clesIngre.stringForKey(clesIngredients.cleIngredient2)
+        let ingr3 = clesIngre.stringForKey(clesIngredients.cleIngredient3)
+        if(ingr1 != nil && ingr2 != nil && ingr3 != nil) {
+            if(ingr1 != self.ingredient1Label.text && ingr2 != self.ingredient2Label.text && ingr3 != self.ingredient3Label.text) {
+                CaptureErreurs.erreurParDefautString("Cocktail non réalisable avec cette recette !")
             }
-            updateObject.saveInBackgroundWithBlock({ (ok:Bool, erreur:NSError?) -> Void in
-                if(erreur != nil) {
-                    CaptureErreurs.erreurParDefaut(erreur!)
+            else {
+                //envoyerCocktailButton.addTarget(self, action: "envoieCommande", forControlEvents: UIControlEvents.TouchUpInside)
+                envoieCommande()
+                // Incrémente le compteur de consomation de cocktails sur Parse
+                if let updateObject = currentObject {
+                    if (updateObject["nb_conso_cocktail"] != nil) {
+                        var nbConso:Int = updateObject["nb_conso_cocktail"] as! Int
+                        nbConso++
+                        updateObject["nb_conso_cocktail"] = nbConso
+                    } else {
+                        // Si le compteur n'est pas initialisé dans Parse
+                        updateObject["nb_conso_cocktail"] = 1
+                    }
+                    updateObject.saveInBackgroundWithBlock({ (ok:Bool, erreur:NSError?) -> Void in
+                        if(erreur != nil) {
+                            CaptureErreurs.erreurParDefaut(erreur!)
+                        }
+                    })
                 }
-            })
-            
+            }
+        } else {
+            CaptureErreurs.informationParDefautString("Veuillez configurer votre machine avant de lancer un cocktail !")
         }
-        
-        
     }
     @IBAction func connecterButtonTapped(sender: AnyObject) {
         connecterButton.addTarget(nrfManager, action: "connect", forControlEvents: UIControlEvents.TouchUpInside)
@@ -161,6 +180,7 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     func recupererIngredients() {
         var cpt:Int = 0
         
+        // Cocktail dans COMPOSER BASE
         if(currentObject!.parseClassName == "Cocktails_base") {
             
             let requete = PFQuery(className: "Composer")
@@ -174,35 +194,38 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
                     var ingreId = resultat["ingredient"].objectId
                     
                     // On récupère la quantité
-                    var quantiteIngredient = resultat["quantite"] as! Int
-                    self.quantiteListe.append(quantiteIngredient)
-                    print(quantiteIngredient)
+                    var quantiteIngredient = resultat["quantite"] as? String
+                    if(quantiteIngredient != nil) {
+                        self.quantiteListe.append(quantiteIngredient!)
+                        //print(quantiteIngredient)
+                    }
                     
                     let objetIngre = PFObject(withoutDataWithClassName: "Ingredients", objectId: ingreId)
                     let requete2 = PFQuery(className: "Ingredients")
                     requete2.whereKey("objectId", equalTo:objetIngre)
                     requete2.getObjectInBackgroundWithId(ingreId!!, block: { (objet:PFObject?, erreur:NSError?) -> Void in
-                        var nom_ingredient = objet?.objectForKey("nom_ingredient") as! String
+                        let nom_ingredient = objet?.objectForKey("nom_ingredient") as! String
                         self.ingrListe.append(nom_ingredient)
-                        print(nom_ingredient)
+                        print("\(nom_ingredient) quantité: \(quantiteIngredient!)")
                         // On place les valeurs dans l'IHM
                         if (cpt == 0) {
                             self.ingredient1Label.text = nom_ingredient
-                            self.quantiteUnLabel.text = "\(quantiteIngredient)"
+                            self.quantiteUnLabel.text = quantiteIngredient!
                             cpt++
                         } else if(cpt == 1) {
                             self.ingredient2Label.text = nom_ingredient
-                            self.quantiteDeuxLabel.text = "\(quantiteIngredient)"
+                            self.quantiteDeuxLabel.text = quantiteIngredient!
                             cpt++
                         } else if (cpt == 2) {
                             self.ingredient3Label.text = nom_ingredient
-                            self.quantiteTroisLabel.text = "\(quantiteIngredient)"
+                            self.quantiteTroisLabel.text = quantiteIngredient!
                             cpt++
                         }
                     })
                 }
             }
         } else {
+            // Cocktail dans COMPOSER PERSO
             let requete = PFQuery(className: "Composer_perso")
             let objetIngrId = PFObject(withoutDataWithClassName: "Cocktails_perso", objectId: cocktailId!)
             requete.whereKey("cocktail_perso", equalTo:objetIngrId)
@@ -214,9 +237,11 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
                     var ingreId = resultat["ingredient"].objectId
                     
                     // On récupère la quantité
-                    var quantiteIngredient = resultat["quantite"] as! Int
-                    self.quantiteListe.append(quantiteIngredient)
-                    print(quantiteIngredient)
+                    var quantiteIngredient = resultat["quantite"] as? String
+                    if(quantiteIngredient != nil) {
+                        self.quantiteListe.append(quantiteIngredient!)
+                        //print(quantiteIngredient)
+                    }
                     
                     let objetIngre = PFObject(withoutDataWithClassName: "Ingredients", objectId: ingreId)
                     let requete2 = PFQuery(className: "Ingredients")
@@ -224,19 +249,19 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
                     requete2.getObjectInBackgroundWithId(ingreId!!, block: { (objet:PFObject?, erreur:NSError?) -> Void in
                         var nom_ingredient = objet?.objectForKey("nom_ingredient") as! String
                         self.ingrListe.append(nom_ingredient)
-                        print(nom_ingredient)
+                        print("\(nom_ingredient) quantité: \(quantiteIngredient!)")
                         // On place les valeurs dans l'IHM
                         if (cpt == 0) {
                             self.ingredient1Label.text = nom_ingredient
-                            self.quantiteUnLabel.text = "\(quantiteIngredient)"
+                            self.quantiteUnLabel.text = quantiteIngredient!
                             cpt++
                         } else if(cpt == 1) {
                             self.ingredient2Label.text = nom_ingredient
-                            self.quantiteDeuxLabel.text = "\(quantiteIngredient)"
+                            self.quantiteDeuxLabel.text = quantiteIngredient!
                             cpt++
                         } else if (cpt == 2) {
                             self.ingredient3Label.text = nom_ingredient
-                            self.quantiteTroisLabel.text = "\(quantiteIngredient)"
+                            self.quantiteTroisLabel.text = quantiteIngredient!
                             cpt++
                         }
                     })
@@ -248,9 +273,10 @@ class DetailCocktailViewController: UIViewController, NRFManagerDelegate {
     // Envoie du cocktail par bluetooth
     func envoieCommande()
     {
-        let string = "2;0;1#"
-        let result = self.nrfManager.writeString(string)
-        log("⬆ Envoie Cocktail: \(string) - Result: \(result)")
+        // code : envoie recette -> 10, 0 -> checksum, 1 -> parrallele, X -> nombre de doses (finir par 0 si pas de récipients),# -> fin
+        let cocktail = "10;0;\(self.quantiteUnLabel.text!);\(self.quantiteDeuxLabel.text!);\(self.quantiteTroisLabel.text!);0;0;0#"
+        let result = self.nrfManager.writeString(cocktail)
+        log("⬆ Envoie Cocktail: \(cocktail) - Result: \(result)")
         if(result == true) {
             CaptureErreurs.informationParDefautString("Cocktail Envoyé !")
         } else {

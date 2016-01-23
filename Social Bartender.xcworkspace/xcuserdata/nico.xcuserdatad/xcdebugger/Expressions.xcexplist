@@ -24,6 +24,9 @@
                value = "nomLabel.text">
             </PersistentString>
             <PersistentString
+               value = "test">
+            </PersistentString>
+            <PersistentString
                value = " updateObject[&quot;nom_categorie&quot;]">
             </PersistentString>
             <PersistentString
@@ -31,9 +34,6 @@
             </PersistentString>
             <PersistentString
                value = "fichierImage">
-            </PersistentString>
-            <PersistentString
-               value = "test">
             </PersistentString>
             <PersistentString
                value = "cocktailsPerso">
@@ -52,10 +52,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TimelineViewController.(viewDidAppear(TimelineViewController) -&gt; (Bool) -&gt; ()).(closure #1):TimelineViewController.swift">
+         contextName = "TimelineViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TimelineViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "TimelineViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TimelineViewController.swift">
+         contextName = "TimelineViewController.(viewDidAppear(TimelineViewController) -&gt; (Bool) -&gt; ()).(closure #1):TimelineViewController.swift">
       </ContextState>
       <ContextState
          contextName = "Publication.telechargerImage() -&gt; ():Publication.swift">
@@ -89,10 +89,10 @@
          contextName = "ConfigurationViewController.enregistrerButtonTapped(AnyObject) -&gt; ():ConfigurationViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "ingredientUnSelectionne">
+               value = "ingredientDeuxSelectionne">
             </PersistentString>
             <PersistentString
-               value = "ingredientDeuxSelectionne">
+               value = "ingredientUnSelectionne">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -109,6 +109,14 @@
          <PersistentStrings>
             <PersistentString
                value = "ingredientUnSelectionne">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConfigurationViewController.nrfReceivedData(NRFManager, data : NSData?, string : String?) -&gt; ():ConfigurationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "passage">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -133,10 +141,10 @@
                value = "ingredientsListe[row]">
             </PersistentString>
             <PersistentString
-               value = "ingredientsListeId">
+               value = "pickerView">
             </PersistentString>
             <PersistentString
-               value = "pickerView">
+               value = "ingredientsListeId">
             </PersistentString>
             <PersistentString
                value = "ingredientUnSelectionneId">

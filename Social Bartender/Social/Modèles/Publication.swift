@@ -110,7 +110,7 @@ class Publication: PFObject {
                 UIApplication.sharedApplication().endBackgroundTask(self.traitementEnvoiePhoto!)
             })
             
-            let donneeImage = UIImageJPEGRepresentation(image, 0.8)!
+            let donneeImage = UIImageJPEGRepresentation(image, 0.6)!
             let fichierImage = PFFile(data: donneeImage)
             /* // Envoie de l'image sur Parse
             fichierImage?.saveInBackgroundWithBlock({ (ok: Bool, erreur: NSError?) -> Void in
@@ -144,11 +144,10 @@ class Publication: PFObject {
                 if(erreur == nil) {
                     // Si l'envoie de la publication est finie, on place le pointeur vers Ingredients
                     // Gestion des Ingrédients (5 à 7) et Quantités (8 à 10)
-                    for compteur in 5...10 {
+                    for compteur in 5...7 {
                         // Dans la table Composer_perso
                         let objetComposer = PFObject(className: "Composer_perso")
                         // Traitement des ingrédients
-                        if(compteur == 5 || compteur == 6 || compteur == 7){
                             let objetIngrId = PFObject(withoutDataWithClassName: "Ingredients", objectId: texte[compteur])
                             objetComposer["ingredient"] = objetIngrId
                             // On place le pointeur vers Cocktail_perso
@@ -157,11 +156,8 @@ class Publication: PFObject {
                             let objetCockId = PFObject(withoutDataWithClassName: "Cocktails_perso", objectId: cocktailPersoId)
                             // Nom de la colonne dans la table Composer_perso
                             objetComposer["cocktail_perso"] = objetCockId
-                        } else {
                             // On écrit les quantités
-                            var test = texte[compteur] as? Int
-                            objetComposer.setObject(test!, forKey: "quantite")
-                        }
+                            objetComposer["quantite"] = texte[compteur+3]
                         objetComposer.saveInBackgroundWithBlock({ (ok:Bool, erreur:NSError?) -> Void in
                             if(erreur != nil) {
                                 CaptureErreurs.erreurParDefaut(erreur!)

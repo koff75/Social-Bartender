@@ -1,6 +1,6 @@
 # Social-Bartender (iOS app)
 
-### Social Bartender is an unique app controlled robotic bartending appliance created for home. With its streamlined design you can thoroughly mix cocktails and infuse bitters to make the perfect cocktail in seconds.
+** Social Bartender is an unique app controlled robotic bartending appliance created for home. With its streamlined design you can thoroughly mix cocktails and infuse bitters to make the perfect cocktail in seconds.**
 It works with bluetooth 4.0 BLE, for both Android and iOS lovers.
 
 ## Some of the features we have designed include:
